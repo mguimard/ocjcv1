@@ -1,4 +1,4 @@
-package training;
+package training.classdesign;
 
 @FunctionalInterface
 interface Operation{
