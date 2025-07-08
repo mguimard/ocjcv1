@@ -13,4 +13,12 @@
 
 # Test 3 - generics / collections
 
+- Connaissance des méthodes TreeMap, TreeSet, etc.. et leur comportements (exceptions, etc...)
+- Pièges masquage de type (Truc)
+- <? extends Truc> ne peut rien setter (mais peut être lu)
+- Subtilités des méthodes TreeMap, TreeSet, etc.
+- Comparator / Comparable
+- Arrays.asList !!!
+- ASC/DESC !!!   this - other = ASC    other - this = DESC
+
 
