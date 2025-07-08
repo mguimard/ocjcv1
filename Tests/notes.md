@@ -1,4 +1,4 @@
-# Test 1/2
+# Test 1/2 - class design
 
 - Pieges blocs static
 - Connaissance de Object (methodes final + leur signatures)
@@ -10,5 +10,7 @@
 - Pas de new sur un enum
 - Pieges appels constructeurs !!!
 - Constructeur caché ?
+
+# Test 3 - generics / collections
 
 
