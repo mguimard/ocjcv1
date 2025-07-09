@@ -14,16 +14,13 @@ interface MyPredicate{
 	boolean f(Integer i);
 }
 
-
-
-
 public class LambdasBasics {
 
 	public static void main(String[] args) {
 
-
+		Predicate<String> commenceParA = s -> s.startsWith("A");
+		
 		MyInterface i = () -> {};
-
 		MyPredicate j = x -> x % 2 == 0;
 
 
@@ -33,21 +30,19 @@ public class LambdasBasics {
 			}
 		};
 
-
-
 		List<Integer> ints = new ArrayList<Integer>();
 		ints.add(1);
 		ints.add(2);
 		ints.add(3);
 		ints.add(4);
 
-		ints.forEach(i -> {
+		ints.forEach(n -> {
 			// consumer code ...
 		});
 
-		Predicate<Integer> isEven = i -> i % 2 == 0;		
+		Predicate<Integer> isEven = n -> n % 2 == 0;		
 		ints.removeIf(isEven);		
-		ints.removeIf(i -> true);
+		ints.removeIf(n -> true);
 
 
 		System.out.println(ints); // 
