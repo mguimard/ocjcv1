@@ -16,7 +16,8 @@ public class StreamsBasics {
 	}
 
 	public static void main(String[] args) {
-		
+		Optional<Integer> optional = Optional.ofNullable(null);
+		System.out.println(optional);
 		Stream<Pizza> ss = Stream.of(new Pizza(), new Pizza());
 		Set<Pizza> pizzas = ss.collect(Collectors.toSet());				
 		

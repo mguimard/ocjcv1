@@ -21,4 +21,15 @@
 - Arrays.asList !!!
 - ASC/DESC !!!   this - other = ASC    other - this = DESC
 
+# Test 4/5
+
+- Connaissance des méthodes de Stream (et différentes impls)
+- Connaissance des functional interfaces built-in
+- Function Interface = 1 méthode abstract !!!! (+ optionel des default)
+- Pièges conversion type
+- Attention aux Predicate.negate
+- S'entrainer sur les groupingBy
+- Connaissance de Optional
+- Subtilités de anyMatch, noneMatch, etc.
+
 
