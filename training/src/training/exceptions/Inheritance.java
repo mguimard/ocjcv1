@@ -14,7 +14,30 @@ public class Inheritance {
 		{}
 	}
 	
+	static class Animal{
+		void cri() throws Exception{};
+	}
+
+	static class Chien extends Animal {
+		void cri() {};
+	}
+	
 	public static void main(String[] args) {
+		
+		Chien c = new Chien();
+		c.cri();
+		
+		try {
+			((Animal) c).cri();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		Animal a = new Chien();
+		
+		//a.cri();		
+		
+		
 		Printer p = new ConsolePrinter();
 		
 		try {

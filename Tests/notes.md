@@ -32,4 +32,13 @@
 - Connaissance de Optional
 - Subtilités de anyMatch, noneMatch, etc.
 
+# Test  6
+
+- pieges multicatch (meres et filles)
+- pieges héritage classe mere leve exception, pas la fille, c'est le type de la variable qui compte
+- Pas AutoCloseable == pas de try-with statement
+- Baisser seulement le niveau d'exception lors d'héritage
+- Visibilité variables
+- Connaissance des signatures, comportements des close, hiérarchies des exceptions du core de java
+- Suppression des exceptions !
 
