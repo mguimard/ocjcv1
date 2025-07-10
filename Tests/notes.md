@@ -67,6 +67,13 @@
 - Attention au paths relatifs/absolus
 
 
+# Test 10
+
+- connaissance des méthodes / APIS (exceptions?)
+- pièges nombre de places dans le pool, nombre de threads ajoutés
+- Future.get => peut renvoyer null => peut être casté en n'importe quoi
+- Ordre des exécutions !
+- Thread safe / unsafe !!!
 
 
 
