@@ -57,5 +57,16 @@
 - passage du monde texte au monde numérique (char to int)
 
 
+# Test 9
+
+- connaissance des API/méthodes Files, Paths, etc.
+- subtilités lettre disque Windows (pas prise en compte)
+- Attention à la profondeur de Files.walk
+- Attention  Path.endsWith vs String.endsWith
+- FileAlreadyExist ???
+- Attention au paths relatifs/absolus
+
+
+
 
 
