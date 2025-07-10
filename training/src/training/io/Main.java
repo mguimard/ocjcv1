@@ -66,6 +66,23 @@ public class Main {
 			System.out.println(nextInt);
 		}
 
+		
+		FileInputStream is = null;
+		
+		try {
+			is = new FileInputStream(f);
+			/// 
+			///
+		} catch(IOException e) {
+			
+		}
+		finally {
+			if(is != null) {
+				is.close();
+			}
+		}
+		
+		
 
 		System.out.println("Fin de programme");
 	}

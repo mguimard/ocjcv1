@@ -14,7 +14,7 @@ public class FilesAPI {
 		System.out.println(dir.isFile());
 		System.out.println(dir.isDirectory());
 		
-		File[] files = dir.listFiles(new FilenameFilter() {			
+		File[] files = dir.listFiles(new FilenameFilter() {
 			@Override
 			public boolean accept(File dir, String name) {
 				return name.endsWith(".txt");				
