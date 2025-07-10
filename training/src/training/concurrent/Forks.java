@@ -6,6 +6,7 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
 import java.util.concurrent.RecursiveAction;
 import java.util.concurrent.RecursiveTask;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Forks {
 	
@@ -27,11 +28,16 @@ public class Forks {
 	static class MegaCalculator extends RecursiveAction {
 		
 		int[] arr;
-		final static int maxPerRun = 100;
+		final static int maxPerRun = 10;
 		
 		int start = 0;
 		int end = 0;		
+		
+		// PAS THREAD SAFE !!!
 		static int result = 0;
+		
+		// THREAD SAFE
+		static AtomicInteger safeResult = new AtomicInteger(0);
 		
 		public MegaCalculator(int[] arr, int start, int end) {
 			System.out.println("New Fork : " + start + " -> " + end);
@@ -43,9 +49,14 @@ public class Forks {
 		@Override
 		protected void compute() {
 			if(end - start <= maxPerRun) {
+				int localSum = 0;
 				for(int i = start; i < end; i++) {
 					result += arr[i];
-				}					
+					localSum += arr[i];
+				}
+				
+				safeResult.getAndAdd(localSum);
+				
 			} else {
 				int mid = ( start + end ) / 2;
 				MegaCalculator m1 = new MegaCalculator(arr, start, mid);
@@ -75,7 +86,8 @@ public class Forks {
 			System.out.println("Error " + e.getMessage());
 		}
 		
-		System.out.println(MegaCalculator.result);		
+		System.out.println(MegaCalculator.result);
+		System.out.println(MegaCalculator.safeResult);		
 		
 	}
 
