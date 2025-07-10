@@ -49,3 +49,13 @@
 - maitrise passage heure d'été
 - Immutable !!!
 
+# Test 8
+
+- connaissance des méthodes et API : exceptions ou non ???
+- serializable ??? ObjectOutputStream.writeObject
+- static -> pas écrit avec serializable
+- passage du monde texte au monde numérique (char to int)
+
+
+
+
