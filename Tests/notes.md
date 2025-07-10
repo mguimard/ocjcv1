@@ -42,3 +42,10 @@
 - Connaissance des signatures, comportements des close, hiérarchies des exceptions du core de java
 - Suppression des exceptions !
 
+# Test 7
+
+- pièges Duration.between !!! t2 converti en t1, t1 et t2 doivent avoir Time
+- connaissance des formats, des API
+- maitrise passage heure d'été
+- Immutable !!!
+

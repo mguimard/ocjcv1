@@ -4,11 +4,11 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.util.Date;
 
 public class Instants {
 
 	public static void main(String[] args) {
-
 		Instant i = Instant.now();		
 		System.out.println(i);
 
@@ -21,8 +21,7 @@ public class Instants {
 		System.out.println(d.toInstant(ZoneOffset.UTC));
 		
 		Instant i2 = Instant.ofEpochMilli(-1000);
-		System.out.println(i2);
-
+		System.out.println(i2);		
 	}
 
 }
