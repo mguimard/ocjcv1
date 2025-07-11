@@ -85,12 +85,12 @@
 - pièges sur updateDouble ou autre update (seulement en mémoire)
 - connaissance des props d'une connexion
 
+# Test 12
 
-
-
-
-
-
+- Connaissance APIs
+- Pièges sur les noms de fichiers (langue en majuscule)
+- Bien comprendre l'ordre de recherche (locale spécifiée + default)
+- Ordre des clés/valeurs dépend de l'ordre des recherches
 
 
 
