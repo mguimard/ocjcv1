@@ -12,6 +12,39 @@ import java.util.Locale;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
+
+/*
+ 
+RB.properties
+RB_en.properties
+RB_en_US.properties
+
+RB_fr_FR.properties
+RB_FR.properties
+
+RB_lang_country
+RB_lang
+
+
+default en_US
+getBundle("RB", locale(fr, FR))
+
+default en_US
+getBundle("RB", locale(fr, BE))
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 class MyStringsBundle extends ListResourceBundle{
 	public MyStringsBundle() {}
 	
@@ -42,7 +75,9 @@ class MyStringsBundle_fr_FR extends ListResourceBundle{
 public class Main {
 
 	public static void main(String[] args) {
-		static_bundles(args);
+		System.out.println(Locale.US);
+		//Arrays.stream(Locale.getAvailableLocales()).filter(x -> x.toString().contains("FR")).forEach(System.out::println);
+		//static_bundles(args);
 	}
 	
 	
