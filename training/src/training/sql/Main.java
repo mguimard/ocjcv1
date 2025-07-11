@@ -26,7 +26,22 @@ public class Main {
 		
 	}
 	
-	public static void main(String[] args) throws SQLException {
+	
+	public static void rollbacks_transaction(String[] args) throws SQLException {
+		Statement selectStmt = c.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+		
+		c.setAutoCommit(false);
+		selectStmt.execute("INSERT INTO KEBAB VALUES(5, 'mayo')");
+		selectStmt.execute("INSERT INTO KEBAB VALUES(6, 'ketchup')");
+		c.rollback();
+		
+		//c.setAutoCommit(true);
+		selectStmt.execute("INSERT INTO KEBAB VALUES(7, 'test')");
+		c.commit();
+		c.rollback();
+	}
+	
+	public static void cursor_out_of_bounds(String[] args) throws SQLException {
 		Statement selectStmt = c.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 		ResultSet rs = selectStmt.executeQuery("SELECT * FROM KEBAB");
 		
