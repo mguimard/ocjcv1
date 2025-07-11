@@ -76,4 +76,22 @@
 - Thread safe / unsafe !!!
 
 
+# Test 11
+
+- connaissance des méthodes de l'API (quasiment toutes les opérations lèvent une SQLException)
+- Attention au curseur (est-on avant ou après la first/last row)
+- Attention à execute VS executeQuery (pas de update/insert/delete pour executeQuery)
+- Attention aux try-with statements (AutoCloseable)
+- pièges sur updateDouble ou autre update (seulement en mémoire)
+- connaissance des props d'une connexion
+
+
+
+
+
+
+
+
+
+
 
